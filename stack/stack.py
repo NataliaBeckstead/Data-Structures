@@ -15,7 +15,7 @@ from singly_linked_list import LinkedList
 
 
 '''With array'''
-
+'''
 class Stack:
     def __init__(self):
         self.size = 0
@@ -36,11 +36,11 @@ class Stack:
             return first
         else:
             return None
-
+'''
 
 '''With linked list'''
-'''
-class Queue:
+
+class Stack:
     def __init__(self):
         self.size = 0
         self.storage = LinkedList()
@@ -55,9 +55,8 @@ class Queue:
 
     def pop(self):
         if len(self):
-            first = self.storage.remove_head()
+            first = self.storage.remove_tail()
             self.size -= 1
             return first
         else:
             return None
-'''
