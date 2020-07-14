@@ -15,7 +15,9 @@ Stretch: What if you could only use instances of your Stack class to implement t
 """
 
 
-from singly_linked_list import LinkedList 
+import sys
+sys.path.append('../singly_linked_list/')
+from singly_linked_list import LinkedList
 
 
 '''With array'''
