@@ -83,12 +83,29 @@ class BSTNode:
     # Print the value of every node, starting with the given node,
     # in an iterative breadth first traversal
     def bft_print(self, node):
-        pass
+        queue = []
+        queue.append(node)
+        while len(queue) > 0:
+            print(queue[0].value)
+            if queue[0].left:
+                queue.append(queue[0].left)
+            if queue[0].right:
+                queue.append(queue[0].right)
+            queue.pop(0)
 
     # Print the value of every node, starting with the given node,
     # in an iterative depth first traversal
     def dft_print(self, node):
-        pass
+        queue = []
+        queue.append(node)
+        current_node = node
+        while len(queue):
+            current_node = queue.pop(len(queue)-1)
+            if current_node.right:
+                queue.append(current_node.right)
+            if curr_node.left:
+                queue.append(current_node.left)
+            print(curr_node.value)
 
     # Stretch Goals -------------------------
     # Note: Research may be required
