@@ -22,7 +22,7 @@ class BSTNode:
                 self.left = BSTNode(value)
             else:
                 self.left.insert(value)
-        elif value >= self.value:
+        else:
             if self.right == None:
                 self.right = BSTNode(value)
             else:
@@ -74,7 +74,11 @@ class BSTNode:
     # Print all the values in order from low to high
     # Hint:  Use a recursive, depth first traversal
     def in_order_print(self, node):
-        pass
+        print(node.value)
+        if node.left:
+            node.in_order_print(node.left)
+        if node.right:
+            node.in_order_print(node.right)
 
     # Print the value of every node, starting with the given node,
     # in an iterative breadth first traversal
