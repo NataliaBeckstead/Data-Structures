@@ -109,10 +109,10 @@ class BSTNode:
         current = node
         while len(stack) > 0:
             current = stack.pop(len(stack)-1)
+            if current.left:    #go left first is more common
+                stack.append(current.left)
             if current.right:
                 stack.append(current.right)
-            if current.left:
-                stack.append(current.left)
             print(current.value)
 
     # Stretch Goals -------------------------
